@@ -36,7 +36,7 @@ const portfolioData = {
     // ========== HOBBIES (with multiple images) ==========
     hobbies: [
         { name: "Swimming", icon: "fas fa-swimmer", images: ["Image/swim1.jpeg", "Image/swim2.jpeg", "Image/swim3.png"] },
-        { name: "Jogging", icon: "fas fa-running", images: ["Image/run1.jpg", "Image/run2.jpg", "Image/run3.jpg"] },
+        { name: "Jogging", icon: "fas fa-running", images: ["Image/run1.jpg", "Image/run2.jpeg", "Image/run3.jpg"] },
         { name: "Photography", icon: "fas fa-camera", images: ["Image/photo1.jpg", "Image/photo2.jpg", "Image/photo3.jpg", "Image/photo4.jpg",
             "Image/photo5.jpg", "Image/photo6.jpg", "Image/photo7.jpg", "Image/photo8.jpg", "Image/photo9.jpg", "Image/photo10.jpg",
             "Image/photo11.jpg", "Image/photo12.jpg", "Image/photo13.jpg", "Image/photo14.jpg", "Image/photo15.jpg", "Image/photo16.jpg",
