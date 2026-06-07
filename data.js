@@ -3,7 +3,7 @@
 // ============================================
 
 // 📸 YOUR PROFILE PHOTO
-const PROFILE_PHOTO_PATH = "image/pfp.jpg";
+const PROFILE_PHOTO_PATH = "Image/pfp.jpg";
 
 const portfolioData = {
     name: "AL R. ALBIT",
