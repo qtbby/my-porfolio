@@ -21,6 +21,29 @@ function loadContent() {
     const aboutEl = document.getElementById('aboutText');
     if (aboutEl) aboutEl.innerHTML = portfolioData.aboutText;
     
+    // Tech Stack
+    const techGrid = document.getElementById('techstackGrid');
+    if (techGrid) {
+        techGrid.innerHTML = portfolioData.techStack.map(tech => `
+            <div class="tech-card">
+                <i class="${tech.icon}"></i>
+                <span>${escapeHtml(tech.name)}</span>
+            </div>
+        `).join('');
+    }
+
+    // Education
+    const eduList = document.getElementById('educationList');
+    if (eduList) {
+        eduList.innerHTML = portfolioData.education.map(edu => `
+            <div class="edu-card">
+                <div class="edu-title">${escapeHtml(edu.institution)}</div>
+                <div class="edu-detail"><i class="fas fa-graduation-cap"></i> ${escapeHtml(edu.details)}</div>
+                <div class="edu-detail"><i class="fas fa-calendar-alt"></i> ${escapeHtml(edu.year)}</div>
+            </div>
+        `).join('');
+    }
+
     // Hobbies (with click handler)
     const hobbiesGrid = document.getElementById('hobbiesGrid');
     if (hobbiesGrid) {
@@ -203,30 +226,16 @@ function initSmoothScroll() {
 
 // Initialize theme switcher in navbar
 function initThemeSwitcher() {
-    const themeSwitcher = document.getElementById('themeSwitcher');
-    if (!themeSwitcher || !THEMES) return;
-    
-    Object.keys(THEMES).forEach(themeKey => {
-        const themeObj = THEMES[themeKey];
-        const btn = document.createElement('button');
-        btn.classList.add('theme-btn');
-        btn.title = themeObj.name;
-        
-        // Set button background to theme's primary color
-        btn.style.background = themeObj.primary;
-        btn.style.borderColor = themeObj.primary;
-        btn.textContent = themeKey === 'default' ? '⭐' : (themeKey === 'lightBrown' ? '🟤' : (themeKey === 'darkNavy' ? '🔵' : '🟢'));
-        
+    const btns = document.querySelectorAll('.theme-btn');
+    const saved = localStorage.getItem('portfolioTheme') || 'light-brown';
+    document.body.setAttribute('data-theme', saved);
+    btns.forEach(btn => {
         btn.addEventListener('click', () => {
-            applyTheme(themeKey);
-            saveThemePreference(themeKey);
-            updateThemeButtons(themeKey);
+            const theme = btn.getAttribute('data-theme');
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('portfolioTheme', theme);
         });
-        
-        themeSwitcher.appendChild(btn);
     });
-    
-    updateThemeButtons(getCurrentTheme());
 }
 
 // Apply theme by updating CSS variables

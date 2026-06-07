@@ -18,17 +18,26 @@
             <div class="nav-links" id="navLinks">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#techstack" class="nav-link">Tech Stack</a>
+                <a href="#education" class="nav-link">Education</a>
                 <a href="#hobbies" class="nav-link">Hobbies</a>
                 <a href="#achievements" class="nav-link">Achievements</a>
                 <a href="#certificates" class="nav-link">Certificates</a>
                 <a href="#social" class="nav-link">Social</a>
-                <div class="theme-switcher" id="themeSwitcher"></div>
             </div>
             <div class="menu-btn" id="menuBtn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn" data-theme="light-brown" style="background: #c4a484;"></button>
+        <button class="theme-btn" data-theme="dark-navy" style="background: #0a192f;"></button>
+        <button class="theme-btn" data-theme="white" style="background: #ffffff; border:1px solid #ccc;"></button>
+        <button class="theme-btn" data-theme="dark-green" style="background: #1a3b2f;"></button>
+    </div>
 
     <main>
         <!-- Home Section -->
@@ -47,7 +56,7 @@
                     </div>
                     <div class="home-image">
                         <div class="image-frame">
-                            <img src="assets/profile.jpg" alt="Profile" id="profilePhoto">
+                            <img src="image/profile.jpg" alt="Profile" id="profilePhoto">
                             <div class="image-glow"></div>
                         </div>
                     </div>
@@ -70,6 +79,28 @@
                         <div class="stat"><i class="fas fa-trophy"></i><span>Competitive Spirit</span></div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="techstack" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="techstack-grid" id="techstackGrid"></div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-university"></i> Education</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="education-list" id="educationList"></div>
             </div>
         </section>
 
@@ -116,8 +147,8 @@
                 <div class="social-content">
                     <div class="social-icons" id="socialIcons"></div>
                     <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> albital@dnsc.edu.ph</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Brgy.Malativas, Panabo City, Davao del Norte, Philippines</p>
+                        <p><i class="fas fa-envelope"></i> al.albit@ic.edu.ph</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Institute of Computing, Philippines</p>
                     </div>
                 </div>
             </div>
@@ -130,7 +161,7 @@
         </div>
     </footer>
 
-    <!-- Carousel Modal for Hobby Images -->
+    <!-- Carousel Modal for Hobby Images (Fullscreen) -->
     <div id="hobbyModal" class="modal">
         <div class="modal-content modal-carousel">
             <span class="close-modal">&times;</span>
